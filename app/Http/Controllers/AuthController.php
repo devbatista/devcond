@@ -119,4 +119,11 @@ class AuthController extends Controller
 
         return $retorno;
     }
+
+    public function logout()
+    {
+        $retorno = ['error' => ''];
+        auth()->logout();
+        return $retorno;
+    }
 }
