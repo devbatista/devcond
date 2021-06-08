@@ -201,7 +201,7 @@ class UnitController extends Controller
 
         $user = auth()->user();
         $unit = Unit::where('id', $id)->where('id_owner', $user['id'])->first();
-        $vehicle = UnitPet::where('id', $request->input('id'))->first();
+        $pet = UnitPet::where('id', $request->input('id'))->first();
         $idPet = $request->input('id');
         $removePet = UnitPet::where('id', $idPet)->where('id_unit', $id)->first();
 
